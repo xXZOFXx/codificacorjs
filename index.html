@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desencriptador</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+
+<body>
+
+
+    <div class="contenido">
+        <nav>
+            <img src="assets/Vector.svg" width="3%" class="logonv" alt="">
+        </nav>
+
+        <div class="row">
+
+            <div class="cajauno">
+
+                <textarea name="text" id="text" cols="30" rows="2" id="textarea"
+                    placeholder="inserta el  texto  que deseas cifrar o descifrar aqui" style="text-transform: lowercase"></textarea>
+
+                <br>
+
+                <div class="rowbtn">
+
+                    <div class="btnc">
+
+                        <button id="button" class="btne">Cifrar</button>
+
+                    </div>
+                    <div class="btnc2">
+
+
+                        <button id="buttondes" class="btne2">Descifrar</button>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+                <br>
+
+
+            </div>
+
+            <div class="cajados">
+
+                <div class="carta">
+
+                    <img src="assets/Muñeco.svg" class="imagenxd" alt="">
+
+                    <p>texto traducido:</p>
+
+
+                    <textarea name="txttraducido" id="txttraducido" placeholder="Ningún mensaje fue encontrado"
+                        cols="30" rows="2"></textarea>
+
+
+                    <div class="btncopiar">
+
+                        <button class="btne" onclick="copiar()">Copiar</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</body>
+
+<script src="js/cifrar.js"></script>
+
+<script src="js/descifrar.js"></script>
+
+<script>
+    function copiar() {
+
+        let textotraducido = document.getElementById('txttraducido');
+
+
+        textotraducido.select();
+        document.execCommand("copy");
+
+    }
+</script>
+
+</html>
